@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akan Website</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+    <div id = "Body">
+    <h1> Akan Appliction </h1>
+    <p>Kindly enter your birthday date and select  your gender to find  your Akna name </p>
+    <form id="akanform">
+    <label for="birthdate">Birthdate:</label>
+    <input type="date" id = "birthdate" required>
+    <label for="gender">Gender</label>
+    <select id="gender">
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+ </select>
+        <button type="submit">Generate Name</button><br>
+        
+    </form>
+    <h2> <samp id="output"></samp></h2> 
+    </div>
+ <script src="./Src/script.js"></script>
+</body>
+</html>
