@@ -1,4 +1,4 @@
-document.getElementById("akanform").addEventListener("submit", function(event) {
+document.getElementById("akanform").addEventListener("submit",function(event){   
     event.preventDefault();
     this.style.color = "blue";
     
@@ -24,4 +24,8 @@ document.getElementById("akanform").addEventListener("submit", function(event) {
     document.getElementById("output").style.color = "Green";
 
     
+});
+document.getElementById("resetButton").addEventListener("click", function() {
+    document.getElementById("akanform").reset(); // Reset form inputs
+    document.getElementById("output").textContent = ""; // Clear output text
 });
