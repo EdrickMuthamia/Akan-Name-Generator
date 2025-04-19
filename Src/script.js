@@ -1,0 +1,27 @@
+document.getElementById("akanform").addEventListener("submit", function(event) {
+    event.preventDefault();
+    this.style.color = "blue";
+    
+
+    const birthdate = document.getElementById("birthdate").value;
+    const gender = document.getElementById("gender").value;
+
+    if (!birthdate || !gender) {
+        alert("Please enter a valid birthdate and select gender.");
+        return;
+    }
+
+    const date = new Date(birthdate);
+    const dayOfWeek = date.getDay();
+
+    const akanNames = {
+        Male: ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"],
+        Female: ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"]
+    };
+
+    const akanName = akanNames[gender][dayOfWeek];
+    document.getElementById("output") .textContent = `Your Akan name is: ${akanName}`;
+    document.getElementById("output").style.color = "Green";
+
+    
+});
