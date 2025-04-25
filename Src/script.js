@@ -10,6 +10,13 @@ document.getElementById("akanform").addEventListener("submit",function(event){
         alert("Please enter a valid birthdate and select gender.");
         return;
     }
+    const Date= new Date(birthdate);
+    if (isNaN(date.getTime())) {
+        alert("Please enter a valid date.");
+        return;
+    }
+    const today = new Date();
+
 
     const date = new Date(birthdate);
     const dayOfWeek = date.getDay();
@@ -26,6 +33,6 @@ document.getElementById("akanform").addEventListener("submit",function(event){
     
 });
 document.getElementById("resetButton").addEventListener("click", function() {
-    document.getElementById("akanform").reset(); // Reset form inputs
-    document.getElementById("output").textContent = ""; // Clear output text
+    document.getElementById("akanform").reset(); 
+    document.getElementById("output").textContent = ""; 
 });
