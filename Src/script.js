@@ -10,14 +10,7 @@ document.getElementById("akanform").addEventListener("submit",function(event){
         alert("Please enter a valid birthdate and select gender.");
         return;
     }
-    const Date= new Date(birthdate);
-    if (isNaN(date.getTime())) {
-        alert("Please enter a valid date.");
-        return;
-    }
-    const today = new Date();
-
-
+    
     const date = new Date(birthdate);
     const dayOfWeek = date.getDay();
 
@@ -28,6 +21,7 @@ document.getElementById("akanform").addEventListener("submit",function(event){
 
     const akanName = akanNames[gender][dayOfWeek];
     document.getElementById("output") .textContent = `Your Akan name is: ${akanName}`;
+
     document.getElementById("output").style.color = "Green";
 
     
